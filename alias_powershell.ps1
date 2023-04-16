@@ -14,7 +14,14 @@ Get-Content $alias_file | ForEach-Object {
     if (-not [string]::IsNullOrWhiteSpace($_) -and -not $_.StartsWith('#')) {
         $alias_data = $_.Split(':')
         #echo -Name $alias_data[0] -Value $alias_data[1]
-        Set-Alias -Name $alias_data[0] -Value $alias_data[1]
+        $alias_name = $alias_data[0];
+
+        #すでに同録済みの場合は消す
+        if (Test-Path "alias:$alias_name") {
+            Remove-Item "alias:$alias_name"
+        }
+        #Aliasの登録
+        Set-Alias -Name $alias_name -Value $alias_data[1]
     }
 }
 

@@ -33,9 +33,8 @@ wm:"%KIYO_UTL%\Diff\WinMerge\WinMergeU.exe %*"
 #cls:clear:clear
 
 #git関連
+#gcはPowerShellでは使えない。そもそもgから始まるショートカットは使いにくい。
 ci:git commit
 co:git checkout
 br:git branch
 st:git status
-
-
