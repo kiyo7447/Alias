@@ -14,8 +14,8 @@ str:strace
 
 #■terraform
 tf:terraform
-#bash,
-tfa:"terraform fmt&&terraform plan&&terraform apply -auto-approve"
+#bash:o, power shell:x, windows batch:o
+tfa:terraform fmt&&terraform plan&&terraform apply -auto-approve
 
 tr:tracert
 #bash,
@@ -24,8 +24,8 @@ w:wsl
 #■アプリケーション
 h:hidemaru
 #これはまだ未完成
-wm:"%KIYO_UTL%\Diff\WinMerge\WinMergeU.exe %*"
-
+#bash:x, power shell:x, windows batch:x
+wm:%KIYO_UTL%\Diff\WinMerge\WinMergeU.exe %*
 
 #■プラットフォーム依存のコード
 #Windows Batch:Power Shell:bash

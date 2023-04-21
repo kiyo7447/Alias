@@ -63,3 +63,8 @@ Remove-Alias -Name q
 Function q() {
     exit $args
 }
+
+Remove-Alias -Name tfa
+Function tfa() {
+    terraform fmt&&terraform plan&&terraform apply -auto-approve
+}

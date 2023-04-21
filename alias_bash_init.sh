@@ -30,10 +30,17 @@ awk 'NR==1{sub(/^\xef\xbb\xbf/, "")}{print}' "$alias_file" | while IFS=":" read 
         # 効かなかった対応
         # shopt -s expand_aliases
 
-        alias "$name"="$value"
+        #これは動かない。頑張ったけど動かない。
+        #alias "$name"="$value"
+
         #↓ 頑張ったんですけど、aliasが効かなくて強制回避をしました。
         #
-        echo "alias $name=""$value""" >> $alias_proc_sh
+        # if echo "$value" | grep -q " "; then
+        #     IFS=' ' read -ra items <<< "$value"
+        #     echo "$name(){${items[0]} ${items[1]} ${items[2]} ${items[3]} \"\$@\" }" >> $alias_proc_sh
+        # else
+           echo "alias $name=\"$value\"" >> $alias_proc_sh
+        # fi
 
         # Debug Message
         # echo ■COUNT
