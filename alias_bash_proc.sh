@@ -1,6 +1,7 @@
 #このファイルは動的生成されます。
 alias d="docker"
 alias dc="docker-compose"
+alias kc="kubectl"
 alias e="exit"
 alias q="exit"
 alias p="sping"
