@@ -5,6 +5,9 @@
 d:docker
 dc:docker-compose
 
+#■Kubernetes
+kc:kubectl
+
 #■Command
 e:exit
 q:exit
